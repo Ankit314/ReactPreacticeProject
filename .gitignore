@@ -1,0 +1,11 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore specific apps (example)
+my-first-app/
+my-second-app/
+
+# Other ignore patterns
+*.log
+*.env
+node_modules/
