@@ -9,3 +9,8 @@ my-second-app/
 *.log
 *.env
 node_modules/
+my-fouth-app/
+my-six-app/
+my-third-app/
+tic-tac-toe/
+todolist/
