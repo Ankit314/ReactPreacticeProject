@@ -1,0 +1,10 @@
+.sliderImg{
+    height: 400px;
+}
+@media(max-width:767px){
+    .sliderImg{
+        height: 200px;
+
+    }
+    
+}

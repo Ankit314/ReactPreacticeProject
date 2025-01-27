@@ -1,0 +1,74 @@
+/* Set equal height for cards */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Ensure images are responsive */
+  .card-img-top {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Styling for product title */
+  .product-title {
+    color: #000000;
+    text-decoration: none;
+  }
+  .FM_m15{
+    padding-top: 10px;
+  }
+  .FM_f26 a{
+    text-decoration: none;
+    color: #000000;
+    padding: 5px;
+  }
+  
+  .product-title:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add some styling for buttons */
+  .btn-details {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .btn-details:hover {
+    background-color: #0056b3;
+  }
+  .list-type{
+    padding: 0;
+    list-style-type: none;
+  }
+  .list-type li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Make the layout responsive */
+  @media (max-width: 767px) {
+    .FM_m15 {
+      padding: 10px;
+    }
+  
+    .product-card {
+      margin-bottom: 20px;
+    }
+  }
+  
