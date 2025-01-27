@@ -8,3 +8,4 @@ my-second-app/
 # Other ignore patterns
 *.log
 *.env
+node_modules/
