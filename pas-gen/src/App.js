@@ -9,15 +9,21 @@ function App() {
   let [lowerCase, setLowerCase]= useState(false);
   let [number, setNumber]=useState(false);
   let [symbol, setSymbol]= useState(false);
-  let [passwordLen, setPasswordLen]= useState(10)
+  let [passwordLen, setPasswordLen]= useState(10);
+  let [fPass , setFpass]= useState('');
 
   let createPassword=()=>{
-    let charSet=''
+    let finalPass='';
+    let charSet='';
     if(uppercase || lowerCase || number || symbol){
       if(uppercase) charSet+=UC;
       if(lowerCase) charSet+= LC;
       if(number) charSet+=NC;
       if(symbol) charSet+=SC;
+      for(let i=0 ;i<passwordLen;i++){
+        finalPass+= charSet.charAt(Math.floor(Math.random()*charSet.length))
+      }
+      setFpass(finalPass);
 
     }
     else{
@@ -25,18 +31,22 @@ function App() {
     }
   }
 
+  let copyPass =()=>{
+    navigator.clipboard.writeText(fPass);
+  }
+
   return (
     <>
     <div className='passwordBox'>
       <h2>Password Generator</h2>
       <div className='passwordBoxin'>
-        <input type='text' readOnly />
-        <button>Copy</button>
+        <input type='text'value={fPass} readOnly />
+        <button onClick={copyPass}>Copy</button>
       </div>
 
       <div className='passLenght'>
         <label>Password Lenght</label>
-        <input type='number' value={passwordLen} onChange={()=>setPasswordLen()}/>
+        <input type='number' max={20} value={passwordLen} onChange={(event)=>setPasswordLen(event.target.value)}/>
 
       </div>
 
